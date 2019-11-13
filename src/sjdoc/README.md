@@ -2,7 +2,7 @@
 
 **VIS Network** 를 쉽게 확장하여 사용하기 위해 만들어졌습니다.
      
-- `vis-network`
+1. `vis-network`
     - **Node**와 **Edge**로 구성된 네트워크와 네트워크를 표시하는 시각화 **JavaScript Library**입니다.
     - docs: https://visjs.github.io/vis-network/docs/network/
     - github: https://github.com/visjs/vis-network

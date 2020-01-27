@@ -1,33 +1,20 @@
 # Example
-각종 예제
+각종 예제들입니다.  
+용도에 맞게 필요한 예제만 쏙! 쏙!
 
-
-## Start
-- 노드에 마우스 효과
+## 편의상 생략된 코드
+예제에 앞서 가독성을 위하여 공통으로 사용되는 다음 코드들을 생략합니다. 
+1. `JavaScript Library`를 Load
     ```html
-    <script src="https://cdn.jsdelivr.net/gh/sj-js/visnetworkman/vis-network.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/sj-js/visnetworkman/vis-networkman.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@sj-js/visnetworkman/vis-network.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@sj-js/visnetworkman/vis-networkman.min.js"></script>
     <script>
          var visnetworkman = new VisNetworkMan();
     </script>
     ```  
-    
-    *@* *+prefix* *x* *@* 
+  
+2. Node를 구성할 `Data`를 Load
     ```html
-    <script src="../vis-networkman/vis-network.min.js"></script>
-    <script src="../vis-networkman/vis-networkman.js"></script>
-    <script>
-         var visnetworkman = new VisNetworkMan();
-    </script>
-    ```
-  
-  
-  
-### Simple
-- with some datas
-    *@* *!* *@*
-    ```html
-    <body><!-- None --></body>
     <script>
         //1. Data
         var dataList = [
@@ -45,11 +32,53 @@
             {id: 24, label: 'Node 24', group:2, parentId:2},
             {id: 25, label: 'Node 25', group:2, parentId:2}
         ];
+    </script>
+    ```
    
+3. `<Body>`태그
+    ```html
+    <body><!-- None --></body>  
+    ```    
+    *@* *+prefix* *x* *@* 
+    ```html
+    <script src="../vis-networkman/vis-network.min.js"></script>
+    <script src="../vis-networkman/vis-networkman.js"></script>
+    <script>
+         var visnetworkman = new VisNetworkMan();
+    </script>
+    <script>
+        //1. Data
+        var dataList = [
+            {id: 0, label: 'START', group:0, parentId:null},
+            {id: 1, label: 'Node 1', group:1, parentId:0},
+            {id: 2, label: 'Node 2', group:1, parentId:0},
+            {id: 3, label: 'Node 3', group:1, parentId:0},
+            {id: 4, label: 'Node 4', group:2, parentId:0},
+            {id: 7, label: 'Node 7', group:3, parentId:0},
+            {id: 11, label: 'Node 11', group:2, parentId:1},
+            {id: 14, label: 'Node 14', group:2, parentId:1},
+            {id: 15, label: 'Node 15', group:2, parentId:1},
+            {id: 15, label: 'Node 15', group:2, parentId:3},
+            {id: 21, label: 'Node 21', group:2, parentId:2},
+            {id: 24, label: 'Node 24', group:2, parentId:2},
+            {id: 25, label: 'Node 25', group:2, parentId:2}
+        ];
+    </script>
+    <body><!-- None --></body>  
+    ```
+  
+  
+  
+## Simple
+`.setup()`, `.setupExtendsOption()`을 거쳐서 `.renderWithDataList()`를 통해 Network를 간단히 표현할 수 있습니다.
+- test
+    *@* *!* *@*
+    ```html
+    <script>
         //2. Setup - VIS Network Options
         visnetworkman.setup({
-            layout:{
-               randomSeed: 0
+            nodes: {
+                shape: 'box'
             }
         });
    
@@ -60,38 +89,21 @@
         });
    
         //4. Render
-        var container = visnetworkman.renderWithDataList(dataList);
-        document.body.appendChild(container);
+        var container = visnetworkman.renderWithDataList( dataList );
+        document.body.appendChild( container );
     </script>
     ```
   
-### Pointing and Selecting
-- with some datas
+## Pointing and Selecting
+마우스를 Node에 올리거나 Click하여 선택했을 때 Node와 Edge의 Style을 지정할 수 있습니다.
+- test
     *@* *!* *@*
     ```html
-    <body><!-- None --></body>
     <script>
-        //1. Data
-        var dataList = [
-            {id: 0, label: 'START', group:0, parentId:null},
-            {id: 1, label: 'Node 1', group:1, parentId:0},
-            {id: 2, label: 'Node 2', group:1, parentId:0},
-            {id: 3, label: 'Node 3', group:1, parentId:0},
-            {id: 4, label: 'Node 4', group:2, parentId:0},
-            {id: 7, label: 'Node 7', group:3, parentId:0},
-            {id: 11, label: 'Node 11', group:2, parentId:1},
-            {id: 14, label: 'Node 14', group:2, parentId:1},
-            {id: 15, label: 'Node 15', group:2, parentId:1},
-            {id: 15, label: 'Node 15', group:2, parentId:3},
-            {id: 21, label: 'Node 21', group:2, parentId:2},
-            {id: 24, label: 'Node 24', group:2, parentId:2},
-            {id: 25, label: 'Node 25', group:2, parentId:2}
-        ];
-   
         //2. Setup - VIS Network Options
         visnetworkman.setup({
-            layout:{
-               randomSeed: 0
+            nodes: {
+                shape: 'star'
             }
         });
    
@@ -108,40 +120,23 @@
         });
    
         //4. Render
-        var container = visnetworkman.renderWithDataList(dataList);
-        document.body.appendChild(container);
+        var container = visnetworkman.renderWithDataList( dataList );
+        document.body.appendChild( container );
     </script>
     ```
   
   
 
-### Event
-- with some datas
+## Event
+Event를 통해서 `초기 각 Node별 설정` 또는 `Click`, `DoubleClick`등의 Action을 제어할 수 있습니다.
+- test
     *@* *!* *@*
     ```html
-    <body><!-- None --></body>
     <script>
-        //1. Data
-        var dataList = [
-            {id: 0, label: 'START', group:0, parentId:null},
-            {id: 1, label: 'Node 1', group:1, parentId:0},
-            {id: 2, label: 'Node 2', group:1, parentId:0},
-            {id: 3, label: 'Node 3', group:1, parentId:0},
-            {id: 4, label: 'Node 4', group:2, parentId:0},
-            {id: 7, label: 'Node 7', group:3, parentId:0},
-            {id: 11, label: 'Node 11', group:2, parentId:1},
-            {id: 14, label: 'Node 14', group:2, parentId:1},
-            {id: 15, label: 'Node 15', group:2, parentId:1},
-            {id: 15, label: 'Node 15', group:2, parentId:3},
-            {id: 21, label: 'Node 21', group:2, parentId:2},
-            {id: 24, label: 'Node 24', group:2, parentId:2},
-            {id: 25, label: 'Node 25', group:2, parentId:2}
-        ];
-   
         //2. Setup - VIS Network Options
         visnetworkman.setup({
-            layout:{
-               randomSeed: 0
+            nodes: {
+                shape: 'triangleDown'
             }
         });
    
@@ -192,43 +187,28 @@
         });
    
         //4. Render
-        var container = visnetworkman.renderWithDataList(dataList);
-        document.body.appendChild(container);
+        var container = visnetworkman.renderWithDataList( dataList );
+        document.body.appendChild( container );
     </script>
     ```
   
-### Extends Panel
-- with some datas
+## Extends Panel
+마우스를 올려보세요. `ExtendsPanel`의 버튼으로 즉각적으로 그래프 구성을 바꿔볼 수 있습니다.
+- Test
     *@* *!* *@*
     ```html
-    <body><!-- None --></body>
     <script>
-        //1. Data
-        var dataList = [
-            {id: 0, label: 'START', group:0, parentId:null},
-            {id: 1, label: 'Node 1', group:1, parentId:0},
-            {id: 2, label: 'Node 2', group:1, parentId:0},
-            {id: 3, label: 'Node 3', group:1, parentId:0},
-            {id: 4, label: 'Node 4', group:2, parentId:0},
-            {id: 7, label: 'Node 7', group:3, parentId:0},
-            {id: 11, label: 'Node 11', group:2, parentId:1},
-            {id: 14, label: 'Node 14', group:2, parentId:1},
-            {id: 15, label: 'Node 15', group:2, parentId:1},
-            {id: 15, label: 'Node 15', group:2, parentId:3},
-            {id: 21, label: 'Node 21', group:2, parentId:2},
-            {id: 24, label: 'Node 24', group:2, parentId:2},
-            {id: 25, label: 'Node 25', group:2, parentId:2}
-        ];
-   
         //2. Setup - VIS Network Options
         visnetworkman.setup({
-            layout:{
-               randomSeed: 0
+            nodes: {
+                shape: 'hexagon'
             }
         });
    
         //3. Setup - VIS NetworkMan Options   
         visnetworkman.setupExtendsOption({
+            modePointAllSubLink: true,
+            modeSelectAllSubLink: true,
             nodeWhenStart: {color: {background:'#b2e2d9', border:'#19211f'}},
             edgeWhenStart: {color: {color:'#aae35f'}},
             nodeWhenPoint: {color: {background:'#ff1559', border:'#ff1559'}},
@@ -248,7 +228,9 @@
         });
    
         //4. Render
-        var container = visnetworkman.renderWithDataList(dataList);
-        document.body.appendChild(container);
+        var container = visnetworkman.renderWithDataList( dataList );
+        document.body.appendChild( container );
     </script>
     ```
+    - `modeExtendsPanelSaveToLocalStorage`을 `true`로 설정하면 눌렀던 데이터들이 LocalStorage에 저장되어 기억시킬 수 있습니다.
+    - 만약 여러 그래프를 다룰 경우 `saveKey`옵션에 각각 다른 Key를 입력하여 버튼의 상태를 다르게 관리할 수도 있습니다.

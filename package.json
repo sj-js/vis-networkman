@@ -1,14 +1,14 @@
 {
-  "name": "boxman",
+  "name": "@sj-js/vis-networkman",
   "version": "1.0.0",
-  "description": "boxman is javascript library to use GUI",
+  "description": "more with vis-network",
   "main": "",
   "author": "souljungkim@gmail.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sj-js/boxman.git",
-    "web": "https://github.com/sj-js/boxman"
+    "url": "https://github.com/sj-js/vis-networkman.git",
+    "web": "https://github.com/sj-js/vis-networkman"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

@@ -19,6 +19,7 @@
 ```
 - VIS Network Man
 - Unification
+- Categorizing
 - Effect
 - Extends Panel
 - ETC
@@ -35,7 +36,7 @@
 - 필요한 `js`파일을 load합니다.
     ```html
     <script src="https://cdn.jsdelivr.net/gh/sj-js/vis-networkman/vis-network.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/sj-js/vis-networkman/vis-networkman.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/sj-js/vis-networkman/vis-networkman.min.js"></script>
     <script>
          var visnetworkman = new VisNetworkMan();
     </script>
@@ -144,10 +145,20 @@
     ```
 
 ### 2-3. .renderWithDataList([ {...}, ... ])
-
-
-### 2-4 .renderWithNodeDataList([ {...}, ... ])
+- `Data기준`의 Object Array로 Rendering합니다.
+    ```javascript
+    var container = visnetworkman.renderWithDataList([
+    ]);
+    document.body.appendChild(container);
+    ```
   
+### 2-4 .renderWithNodeDataList([ {...}, ... ])
+- `Node기준`의 Object Array로 Rendering합니다.   
+    ```javascript
+    var container = visnetworkman.renderWithNodeDataList([
+    ]);
+    document.body.appendChild(container);
+    ```  
   
   
 ## 3. Extends Options

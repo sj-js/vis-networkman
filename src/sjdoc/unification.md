@@ -34,7 +34,7 @@ modePruneNodeNotToRootGroup | Boolean | true | Root Node까지
 
 
 ## modeCloneNodeWhenDuplicateLink
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -72,7 +72,7 @@ modePruneNodeNotToRootGroup | Boolean | true | Root Node까지
     </script>
     ```
         
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -113,7 +113,7 @@ modePruneNodeNotToRootGroup | Boolean | true | Root Node까지
     
   
 ## modeUniqueDataInSameGroup
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -153,7 +153,7 @@ modePruneNodeNotToRootGroup | Boolean | true | Root Node까지
 
 
 ## modeUniqueData
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -194,7 +194,7 @@ modePruneNodeNotToRootGroup | Boolean | true | Root Node까지
   
   
 ## modeOrderByGroup & orderList
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -238,7 +238,7 @@ modePruneNodeNotToRootGroup | Boolean | true | Root Node까지
 
 
 ## modePruneNodeWithoutEdge & modePruneNodeNotToRootGroup
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>

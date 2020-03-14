@@ -38,7 +38,7 @@ edgeWhenSelect | Object or Function | null | Edge를 선택했을 때 설정
 
 
 ## modeLoading
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -62,7 +62,7 @@ edgeWhenSelect | Object or Function | null | Edge를 선택했을 때 설정
   
   
 ## Event - Start, Point, Select
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -91,7 +91,7 @@ edgeWhenSelect | Object or Function | null | Edge를 선택했을 때 설정
     </script>
     ```
   
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>

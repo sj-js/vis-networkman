@@ -32,7 +32,7 @@ maxChildNodeCount | Number | 5 | 최대연결 노드 수
 
 
 ## container
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>

@@ -60,7 +60,7 @@ categoryLabelFiled | String | categoryName | Category Node의 Label값을 갖는
         
         
 ## modeMakeCategoryLinkEachNode
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- 같은 카테고리 정보의 Node끼리 Edge로 연결합니다.
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -85,7 +85,7 @@ categoryLabelFiled | String | categoryName | Category Node의 Label값을 갖는
 
 
 ## modeTintColorByCategory
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- 지정된 카테고리의 색으로 변경합니다.
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -111,7 +111,7 @@ categoryLabelFiled | String | categoryName | Category Node의 Label값을 갖는
 
 
 ## modeDrawingCategoryBackgroundBeforeDrawing
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- 카테고리 Node의 배경에 Canvas 작업을 합니다.
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -138,7 +138,7 @@ categoryLabelFiled | String | categoryName | Category Node의 Label값을 갖는
 
 
 ## categoryIdAndColorMap
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- 카테고리별로 색을 지정합니다.
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -166,7 +166,7 @@ categoryLabelFiled | String | categoryName | Category Node의 Label값을 갖는
   
   
 ## categoryRandomColorList
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- 카테고리별로 임의로 색을 입힙니다.
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -194,7 +194,7 @@ categoryLabelFiled | String | categoryName | Category Node의 Label값을 갖는
   
   
 ## categoryIdField & categoryLabelFiled
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- 카테고리ID와 카테고리Label에 대한 속성명을 변경합니다.
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>

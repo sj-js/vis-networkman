@@ -34,7 +34,7 @@ extendsPanelHideItemList | Array | null | ExampleForNothing) null or []   //- Ex
 
 
 ## modeExtendsPanel & modeExtendsPanelAutoHide
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다. 
+- Test 
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -59,7 +59,7 @@ extendsPanelHideItemList | Array | null | ExampleForNothing) null or []   //- Ex
 
 
 ## modeExtendsPanelSaveToLocalStorage
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -83,7 +83,7 @@ extendsPanelHideItemList | Array | null | ExampleForNothing) null or []   //- Ex
     ```
 
 ## extendsPanelToggleDefaultIndexMap
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -114,7 +114,7 @@ extendsPanelHideItemList | Array | null | ExampleForNothing) null or []   //- Ex
 
 
 ## extendsPanelShowItemList & extendsPanelHideItemList
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
@@ -140,7 +140,7 @@ extendsPanelHideItemList | Array | null | ExampleForNothing) null or []   //- Ex
 
 
 ## .setupExtendsPanel()
-- 카테고리 정보를 통해 카테고리Node를 자동으로 생성합니다.
+- Test
     *@* *!* *@*
     ```html
     <body><div id='test-container'></div></body>
